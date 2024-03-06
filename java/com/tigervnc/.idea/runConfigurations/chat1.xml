@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="chat1" type="Java Scratch" editBeforeRun="true" singleton="false">
+    <option name="envFilePaths">
+      <option value="//wsl.localhost/kali-linux/home/johnnyt" />
+    </option>
+    <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+    <module name="tigervnc" />
+    <option name="REDIRECT_INPUT" value="true" />
+    <option name="INPUT_FILE" value="$MODULE_WORKING_DIR$" />
+    <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
+    <shortenClasspath name="ARGS_FILE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

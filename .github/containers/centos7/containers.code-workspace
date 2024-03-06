@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "dan",
+			"path": "../../../../dan"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/*.log": true,
+			"**/.*": true,
+			"**/*.csproj": true,
+			"**/bin": true,
+			"**/obj": true
+		},
+		"compile-hero.disable-compile-files-on-did-save-code": false
+	}
+}

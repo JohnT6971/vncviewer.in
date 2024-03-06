@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="run" type="js.build_tools.npm" editBeforeRun="true" singleton="false" nameIsGenerated="true">
+    <package-json value="$USER_HOME$/multi-container-app/app/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="./python.exe" />
+    </scripts>
+    <node-interpreter value="wsl://kali-linux@/usr/bin/node" />
+    <envs>
+      <env name="ALLUSERSPROFILE" value="C:\ProgramData" />
+      <env name="USERDOMAIN" value="COMMANDER" />
+    </envs>
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,0 +1,603 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python C++ Debugger",
+      "type": "pythoncpp",
+      "request": "launch",
+      "pythonConfig": "default",
+      "cppConfig": "!!pick 'default (win) Attach' or 'default (gdb) Attach'"
+    },
+    {
+      "name": "Python C++ Debugger",
+      "type": "pythoncpp",
+      "request": "launch",
+      "pythonLaunchName": "Python: Current File",
+      "cppAttachName": "'(Windows) Attach' or '(gdb) Attach'"
+    },
+    {
+      "name": "PlatformIO Debugger",
+      "request": "launch",
+      "type": "platformio-debug",
+      "executable": ".pio/build/myenv/firmware.elf",
+      "toolchainBinDir": "/usr/local/bin"
+    },
+    {
+      "name": "Listen for Xdebug",
+      "type": "php",
+      "request": "launch",
+      "port": [
+        9003,
+        9000
+      ]
+    },
+    {
+      "name": "Launch current script in console",
+      "type": "php",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "externalConsole": false,
+      "port": 9003
+    },
+    {
+      "name": "Launch built-in server",
+      "type": "php",
+      "request": "launch",
+      "runtimeArgs": [
+        "-S",
+        "localhost:8000",
+        "-t",
+        "."
+      ],
+      "port": 9003,
+      "serverReadyAction": {
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Launch & Profile built-in server",
+      "type": "php",
+      "request": "launch",
+      "noDebug": true,
+      "profile": true,
+      "runtimeArgs": [
+        "-S",
+        "localhost:8000",
+        "-t",
+        "."
+      ],
+      "port": 9003,
+      "serverReadyAction": {
+        "action": "openExternally"
+      }
+    },
+    {
+      "args": [
+        "generator"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "Yeoman generator",
+      "program": "${workspaceFolder}/node_modules/yo/lib/cli.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "nodemon",
+      "program": "${workspaceFolder}/app.js",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "nodemon",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "nodemon",
+      "program": "${workspaceFolder}/app.js",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "nodemon",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "args": [
+        "-u",
+        "tdd",
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/test"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "name": "Mocha Tests",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch via NPM",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "debug"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/app.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/app.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/app.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "args": [
+        "task"
+      ],
+      "name": "Gulp task",
+      "program": "${workspaceFolder}/node_modules/gulp/bin/gulp.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "address": "TCP/IP address of process to be debugged",
+      "localRoot": "${workspaceFolder}",
+      "name": "Attach to Remote",
+      "port": 9229,
+      "remoteRoot": "Absolute path to the remote directory containing the program",
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Attach by Process ID",
+      "processId": "${command:PickProcess}",
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "name": "Attach",
+      "port": 9229,
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
+      "type": "mago-mi",
+      "request": "attach",
+      "name": "Attach to PID",
+      "target": "[PID]",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "lldb-mi",
+      "request": "launch",
+      "name": "Launch Program",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "lldb-mi",
+      "request": "launch",
+      "name": "Launch Program (SSH)",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "ssh": {
+        "host": "127.0.0.1",
+        "cwd": "/home/remote_user/project/",
+        "keyfile": "/home/my_user/.ssh/id_rsa",
+        "user": "remote_user"
+      },
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "lldb-mi",
+      "request": "launch",
+      "name": "Launch Program (SSH + X11)",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "ssh": {
+        "host": "127.0.0.1",
+        "cwd": "/home/remote_user/project/",
+        "keyfile": "/home/my_user/.ssh/id_rsa",
+        "user": "remote_user",
+        "forwardX11": true,
+        "x11host": "localhost",
+        "x11port": 6000
+      },
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "lldb-mi",
+      "request": "attach",
+      "name": "Attach to PID",
+      "target": "[PID]",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "kotlin",
+      "request": "launch",
+      "name": "Kotlin Launch",
+      "projectRoot": "${workspaceFolder}",
+      "mainClass": "path.to.your.MainClassKt"
+    },
+    {
+      "type": "kotlin",
+      "request": "attach",
+      "name": "Kotlin Attach",
+      "hostName": "localhost",
+      "port": 8000,
+      "timeout": 30000
+    },
+    {
+      "name": "Launch Script on Server",
+      "request": "launch",
+      "type": "janus",
+      "script": "",
+      "username": "",
+      "password": "extension.vscode-janus-debug.askForPassword",
+      "principal": "",
+      "host": "localhost",
+      "applicationPort": 11000,
+      "tls": false,
+      "debuggerPort": 8089,
+      "currentConfiguration": true,
+      "stopOnEntry": true,
+      "log": {
+        "fileName": "/vscode-janus-debug-launch.log",
+        "logLevel": {
+          "default": "Debug"
+        }
+      },
+      "timeout": 6000
+    },
+    {
+      "name": "Attach to Server",
+      "request": "attach",
+      "type": "janus",
+      "host": "localhost",
+      "debuggerPort": 8089,
+      "log": {
+        "fileName": "/vscode-janus-debug-attach.log",
+        "logLevel": {
+          "default": "Debug"
+        }
+      }
+    },
+    {
+      "type": "julia",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/Program",
+      "stopOnEntry": false
+    },
+    {
+      "type": "java",
+      "request": "attach",
+      "name": "Java",
+      "port": 5005,
+      "sourceRoots": []
+    },
+    {
+      "type": "julia",
+      "request": "launch",
+      "name": "Launch Julia tests",
+      "program": "${workspaceFolder}/test/runtests.jl",
+      "stopOnEntry": true
+    },
+    {
+      "name": "Attach to Server",
+      "request": "attach",
+      "type": "janus",
+      "host": "localhost",
+      "debuggerPort": 8089,
+      "log": {
+        "fileName": "/vscode-janus-debug-attach.log",
+        "logLevel": {
+          "default": "Debug"
+        }
+      }
+    },
+    {
+      "name": "HHVM: Run Script",
+      "type": "hhvm",
+      "request": "launch",
+      "script": "${file}"
+    },
+    {
+      "name": "HHVM: Attach to Server",
+      "type": "hhvm",
+      "request": "attach",
+      "host": "localhost",
+      "port": 8999,
+      "remoteSiteRoot": "${workspaceFolder}",
+      "localWorkspaceRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch test function",
+      "type": "go",
+      "request": "launch",
+      "mode": "test",
+      "program": "${workspaceFolder}",
+      "args": [
+        "-test.run",
+        "MyTestFunction"
+      ]
+    },
+    {
+      "name": "Launch Package",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${fileDirname}"
+    },
+    {
+      "name": "Launch file",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${file}"
+    },
+    {
+      "name": "Connect to server",
+      "type": "go",
+      "request": "attach",
+      "mode": "remote",
+      "remotePath": "${workspaceFolder}",
+      "port": 2345,
+      "host": "127.0.0.1"
+    },
+    {
+      "name": "Launch Package",
+      "type": "go",
+      "request": "launch",
+      "mode": "auto",
+      "program": "${fileDirname}"
+    },
+    {
+      "name": "Attach to Process",
+      "type": "go",
+      "request": "attach",
+      "mode": "local",
+      "processId": 0
+    },
+    {
+      "type": "gdb",
+      "request": "launch",
+      "name": "Launch Program",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "gdb",
+      "request": "launch",
+      "name": "Launch Program (SSH)",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "ssh": {
+        "host": "127.0.0.1",
+        "cwd": "/tmp/working",
+        "keyfile": "/home/my_user/.ssh/id_rsa",
+        "user": "remote_user",
+        "sourceFileMap": {
+          "Launch Program (SSH)": "${workspaceRoot}"
+        }
+      },
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "gdb",
+      "request": "launch",
+      "name": "Launch Program (SSH + X11)",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "ssh": {
+        "host": "127.0.0.1",
+        "cwd": "/home/remote_user/project/",
+        "keyfile": "/home/my_user/.ssh/id_rsa",
+        "user": "remote_user",
+        "forwardX11": true,
+        "x11host": "localhost",
+        "x11port": 6000
+      },
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "gdb",
+      "request": "attach",
+      "name": "Attach to gdbserver",
+      "executable": "./bin/executable",
+      "target": ":2345",
+      "remote": true,
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "name": "C#: <project-name> Debug",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/<relative-path-to-project-folder><project-name>.csproj"
+    },
+    {
+      "name": "Debug: LWC Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/sfdx-lwc-jest",
+      "args": [
+        "--",
+        "--runInBand"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/@salesforce/sfdx-lwc-jest/bin/sfdx-lwc-jest"
+      }
+    },
+    {
+      "type": "gdb",
+      "request": "attach",
+      "name": "Debug Microcontroller",
+      "target": "extended-remote /dev/cu.usbmodem00000000",
+      "executable": "./bin/executable.elf",
+      "cwd": "${workspaceRoot}",
+      "autorun": [
+        "monitor tpwr enable",
+        "monitor swdp_scan",
+        "attach 1",
+        "load ./bin/executable.elf"
+      ]
+    },
+    {
+      "type": "gdb",
+      "request": "launch",
+      "name": "Launch Program",
+      "target": "./bin/executable",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "name": "Attach to Process",
+      "type": "go",
+      "request": "attach",
+      "mode": "local",
+      "processId": 0
+    },
+    {
+      "type": "gdb",
+      "request": "attach",
+      "name": "Attach to PID",
+      "target": "[PID]",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "by-gdb",
+      "request": "launch",
+      "name": "Launch(SSH)",
+      "program": "Input program path on remote.",
+      "cwd": "Input remote directory",
+      "ssh": {
+        "enabled": true,
+        "username": "root",
+        "address": "ip:port",
+        "passwordType": "none"
+      }
+    },
+    {
+      "type": "by-gdb",
+      "request": "launch",
+      "name": "Launch(gdb)",
+      "program": "${fileBasenameNoExtension}",
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "type": "gdb",
+      "request": "attach",
+      "name": "Attach to PID",
+      "target": "[PID]",
+      "cwd": "${workspaceRoot}",
+      "valuesFormatting": "parseText"
+    },
+    {
+      "type": "by-gdb",
+      "request": "launch",
+      "name": "Launch(remote)",
+      "program": "${fileBasenameNoExtension}",
+      "cwd": "${workspaceRoot}",
+      "remote": {
+        "enabled": true,
+        "address": ":2345",
+        "mode": "remote",
+        "execfile": "${fileBasenameNoExtension}"
+      }
+    },
+    {
+      "type": "cmake",
+      "request": "launch",
+      "name": "CMake: Script debugging",
+      "cmakeDebugType": "script",
+      "scriptPath": "${workspaceFolder}/<...>.cmake"
+    },
+    {
+      "type": "cmake",
+      "request": "launch",
+      "name": "CMake: Externally launched",
+      "cmakeDebugType": "external",
+      "pipeName": "<...>"
+    },
+    {
+      "type": "cmake",
+      "request": "launch",
+      "name": "CMake: Configure project",
+      "cmakeDebugType": "configure",
+      "clean": false,
+      "configureAll": false
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "cwd": "j:/tigervnc-1.13.1/.github/containers/bionic",
+      "program": "j:/tigervnc-1.13.1/.github/containers/bionic/build/Debug/outDebug"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="chat2" type="Java Scratch" singleton="false">
+    <envs>
+      <env name="ALLUSERSPROFILE" value="C:\ProgramData" />
+      <env name="CommonProgramW6432" value="C:\Program Files\Common Files" />
+      <env name="COMPUTERNAME" value="COMMANDER" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="java" />
+    <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
